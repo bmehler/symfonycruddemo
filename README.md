@@ -5,7 +5,7 @@
 To install clone the github repository
 
 ```php
-git clone
+git clone https://github.com/bmehler/symfonycruddemo.git
 ```
 
 Change to the cloned folder and use the composer
