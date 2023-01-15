@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PersonController!{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="col-lg-12>
+        <div class="row">
+            <h4 style="padding-top:50px">Create new Employee</h4>
+                {{ include('person/_form.html.twig') }}
+                <a href="{{ path('persons') }}">back to list</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

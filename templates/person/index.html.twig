@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PersonController!{% endblock %}
+
+{% block body %}
+
+{% include 'person/helper/flash.html.twig' %}
+{% include 'person/helper/new.html.twig' %}
+
+<div class="container">
+    <div class="col-lg-12">
+        <div class="row">
+            <table class="table">
+                <thead>
+                    <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Firstname</th>
+                    <th scope="col">Lastname</th>
+                    <th scope="col">Position</th>
+                    <th scope="col">Actions</th>
+                    </tr>
+                </thead>
+                <tr>
+                {% for person in persons %}
+                    <td>{{ person.Id|e }}</td>
+                    <td>{{ person.Firstname|e }}</td>
+                    <td>{{ person.Lastname|e }}</td>
+                    <td>{{ person.Position|e }}</td>
+                    <td>
+                        <a href="person/{{ person.ID  }}" class="btn btn-sm btn-warning">Show</a>
+                        <a href="person/edit/{{ person.ID  }}" class="btn btn-sm btn-primary">Edit</a>
+                        <a href="person/delete/{{ person.ID  }}">{{ include('person/_delete_form.html.twig') }}</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

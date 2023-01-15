@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Person{% endblock %}
+
+{% block body %}
+<div class="container">
+    <div class="col-lg-12>
+        <div class="row">
+             <h4 style="padding-top:50px">Edit Person</h4>
+            {{ include('person/_form.html.twig', {'button_label': 'Update'}) }}
+                <a href="{{ path('persons') }}">back to list</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

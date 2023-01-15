@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PersonController!{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="card mt-5 mb-5" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{ person.Firstname|e }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ person.Lastname|e }}</h6>
+                    <p class="card-text">Position: {{ person.position|e }}</p>
+                    <a href="{{ path('persons') }}" class="card-link">back to list</a>
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
