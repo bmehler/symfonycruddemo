@@ -1,5 +1,9 @@
 # Symfony 5.4 CRUD Demo
 
+## Screenshot
+
+![Symfony Crud Demo](screenshot1.png)
+
 ## Getting the Project
 
 To install clone the github repository
